@@ -19,6 +19,11 @@ use Joomla\DI\ServiceProviderInterface;
 use Joomla\Event\DispatcherInterface;
 use Joomla\Plugin\Content\Notifyusers\Extension\Notifyusers;
 
+\JLoader::registerNamespace(
+    'Joomla\\Plugin\\Content\\Notifyusers',
+    __DIR__ . '/../src'
+);
+
 return new class () implements ServiceProviderInterface {
     /**
      * Registers the service provider with a DI container.
