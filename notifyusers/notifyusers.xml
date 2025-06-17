@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" method="upgrade">
+    <name>plg_content_notifyusers</name>
+    <author>Elvis Sedić</author>
+    <creationDate>2025-06</creationDate>
+    <copyright>(C) 2025 Spletodrom</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>info@spletodrom.si</authorEmail>
+    <authorUrl>www.spletodrom.si</authorUrl>
+    <version>2.0.0</version>
+    <description>PLG_CONTENT_NOTIFYUSERS_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Plugin\Content\Notifyusers</namespace>
+    <files>
+        <folder plugin="notifyusers">services</folder>
+        <folder>src</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_content_notifyusers.ini</language>
+        <language tag="en-GB">language/en-GB/plg_content_notifyusers.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="usergroups"
+                    type="UserGroupList"
+                    label="PLG_CONTENT_NOTIFYUSERS_FIELD_USERGROUP_LABEL"
+                    description="PLG_CONTENT_NOTIFYUSERS_FIELD_USERGROUP_LABELDESC"
+                    layout="joomla.form.field.list-fancy-select"
+                    multiple="true"
+                    checksuperusergroup="0"
+                    default="2"
+                />
+                <field
+                    name="subject"
+                    type="text"
+                    label="PLG_CONTENT_NOTIFYUSERS_FIELD_SUBJECT_LABEL"
+                    description="PLG_CONTENT_NOTIFYUSERS_FIELD_SUBJECT_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
